@@ -9,7 +9,6 @@ prismaClient.user.create({
     data:{
         username:Math.random().toString(),
         password:Math.random().toString()
-
     }
 })
 socket.send("hey conected to ws")
