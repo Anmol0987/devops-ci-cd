@@ -3,6 +3,10 @@ import { prismaClient } from "@repo/db/clients";
 const app = express();
 app.use(express.json());
 
+app.get('/',(req,res)=>{
+  res.send('Hi on http server')
+})
+
 app.post("/signup", async (req, res) => {
   const { username, password } = req.body;
   const user = await prismaClient.user.create({
