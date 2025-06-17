@@ -5,11 +5,10 @@ export default async function Home() {
 
   return (
     <div>
-      <h1>hey on front end</h1>
+      <h1>hey on front end buddy</h1>
       {user?.username}
       {user?.password}
       <br />
-      <div>hi there</div>
     </div>
   );
 }
