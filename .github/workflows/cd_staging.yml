@@ -1,13 +1,15 @@
 name: Deploy to staging
+
 on:
   push:
     branches: [main]
 
-  jobs:
-    redeploy_everything:
+jobs:
+  redeploy_everything:
     runs-on: ubuntu-latest
     name: Deploying everything to the staging cluster
     steps:
+      - name: Set up SSH and deploy
       - run: |
           echo "${{ secrets.SSH_PRIVATE_KEY }}" &> ~/ssh_key
           mkdir -p /home/runner/.ssh
